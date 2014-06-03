@@ -1,0 +1,13 @@
+<%= semantic_form_for @employee do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :sex,  :as => :radio,       :collection => ["male", "female"] %>
+    <%= f.input :department,  :as => :select,      :collection => Customer.pluck(:name) %>
+    <%= f.input :category, :as => :check_boxes, :collection => Customer.pluck(:email) %>
+    <%= f.input :address, :as => :text %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
