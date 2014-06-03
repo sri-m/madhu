@@ -2,6 +2,7 @@
 
 
 source 'https://rubygems.org'
+#This is all my gems
 gem 'rmagick'
 gem 'formtastic'
 gem 'will_paginate'
